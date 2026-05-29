@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dice Sheet — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+    line-height: 1.65;
+    color: #1c1c1e;
+    background: #ffffff;
+    font-size: 16px;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #f2f2f7; background: #0a0a0c; }
+    a { color: #0a84ff; }
+    .summary { background: #1c1c1e; }
+  }
+  h1 { font-size: 32px; margin: 0 0 4px; letter-spacing: -0.02em; font-weight: 700; }
+  h2 { font-size: 20px; margin-top: 44px; letter-spacing: -0.01em; font-weight: 600; }
+  p { margin: 12px 0; }
+  .meta { font-size: 14px; opacity: 0.6; margin-bottom: 28px; }
+  .lang-switch { font-size: 14px; opacity: 0.7; margin-bottom: 28px; }
+  .summary {
+    background: #f5f5f7;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin: 24px 0 12px;
+    font-size: 15px;
+  }
+  .summary strong { display: block; margin-bottom: 6px; }
+  hr { border: none; border-top: 1px solid rgba(127,127,127,0.2); margin: 64px 0; }
+  a { color: #0066cc; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<h1>Dice Sheet — Privacy Policy</h1>
+<p class="meta">Last updated: <strong>May 26, 2026</strong> · Effective from public release</p>
+<p class="lang-switch"><a href="#fr">Version française ci-dessous</a></p>
+
+<div class="summary">
+  <strong>In short</strong>
+  Dice Sheet does not collect any personal data. Everything you do in the app stays on your device. No accounts, no analytics, no advertising, no third-party tracking.
+</div>
+
+<h2>1. Who is responsible for your data</h2>
+<p>This app is published as an independent project by:</p>
+<p><strong>Martin Lecué</strong><br>
+Sole developer, acting as data controller within the meaning of Article 4(7) of the General Data Protection Regulation (Regulation (EU) 2016/679, "GDPR").<br>
+Country of establishment: France<br>
+Contact: <a href="mailto:martin.lecue@icloud.com">martin.lecue@icloud.com</a></p>
+
+<h2>2. What data is collected</h2>
+<p><strong>None.</strong> Dice Sheet does not collect, transmit, store on a server, or share any personal data. Players, scores, game history and app preferences are stored exclusively on your device using Apple's standard frameworks (SwiftData and the iOS file system). This data never leaves your device unless you explicitly export or share it yourself.</p>
+<p>The developer has no server, no database, and no way to access your data.</p>
+
+<h2>3. In-app purchases</h2>
+<p>If you choose to purchase the optional Premium unlock, the transaction is processed entirely by <strong>Apple</strong> through the App Store and StoreKit framework. Dice Sheet receives only a local confirmation from Apple that the purchase was successful, in order to unlock the Premium features on devices signed into the same Apple ID. The developer does not receive your name, email address, billing address, or payment information at any point.</p>
+<p>Apple's handling of the transaction is governed by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</p>
+<p><strong>Legal basis:</strong> performance of a contract (Article 6(1)(b) GDPR) — to provide the Premium features you purchased.</p>
+
+<h2>4. Third parties</h2>
+<p>Dice Sheet does not integrate any third-party SDK that collects user data. There is no analytics provider, no crash reporting service, no advertising network, and no social or marketing tracker embedded in the app. The only third party involved is Apple, exclusively for app distribution and purchase processing.</p>
+
+<h2>5. International data transfers</h2>
+<p>Because no data is collected or transmitted by the developer, no international data transfer takes place. Apple's handling of purchase data may involve international transfers, governed by Apple's own privacy framework.</p>
+
+<h2>6. Retention</h2>
+<p>Game data remains on your device until you delete the app or clear it manually from within Settings. The developer retains no user data because none is collected.</p>
+
+<h2>7. Your rights</h2>
+<p>Under the GDPR, you have the right of access, rectification, erasure, restriction of processing, data portability, objection, and the right to withdraw consent at any time. Because the developer does not collect or process personal data, these rights are effectively satisfied by the absence of any collection. Should the policy ever change to introduce data collection, you would be informed in-app and these rights would be exercisable by writing to <a href="mailto:martin.lecue@icloud.com">martin.lecue@icloud.com</a>.</p>
+<p>For data held by Apple in connection with your App Store purchase, please contact Apple directly through your Apple ID account.</p>
+
+<h2>8. Right to lodge a complaint</h2>
+<p>If you believe your rights have been violated, you have the right to lodge a complaint with the supervisory authority of your country of residence. In France, this is the <strong>Commission Nationale de l'Informatique et des Libertés (CNIL)</strong> — <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener">www.cnil.fr/fr/plaintes</a>.</p>
+
+<h2>9. Children's privacy</h2>
+<p>Dice Sheet is rated 4+ and is suitable for children. The app collects no personal data from any user, regardless of age. In France, the digital age of consent under Article 8 GDPR is 15 years old; this provision is not engaged here because no consent-based processing occurs.</p>
+
+<h2>10. Automated decision-making</h2>
+<p>Dice Sheet does not carry out any automated decision-making or profiling within the meaning of Article 22 GDPR.</p>
+
+<h2>11. California residents (CCPA / CPRA)</h2>
+<p>If you are a California resident, you have rights under the California Consumer Privacy Act, as amended by the California Privacy Rights Act, including the right to know, to delete, to correct, and to opt out of the sale or sharing of personal information. Dice Sheet collects no personal information and therefore does not sell, share, or process personal information of California residents.</p>
+
+<h2>12. Security</h2>
+<p>The developer relies on Apple's enterprise-grade security infrastructure for app distribution and purchase processing, including encryption in transit (HTTPS/TLS) for all communications with Apple's services.</p>
+
+<h2>13. Changes to this policy</h2>
+<p>This policy may be updated occasionally to reflect changes to the app or to applicable law. The "Last updated" date at the top reflects the most recent revision. Significant changes — particularly any introduction of data collection — will be communicated in-app before they take effect.</p>
+
+<h2>14. Contact</h2>
+<p>For any privacy question, write to <a href="mailto:martin.lecue@icloud.com">martin.lecue@icloud.com</a>.</p>
+
+<hr id="fr">
+
+<h1>Dice Sheet — Politique de confidentialité</h1>
+<p class="meta">Dernière mise à jour : <strong>26 mai 2026</strong> · En vigueur à compter de la publication</p>
+
+<div class="summary">
+  <strong>En résumé</strong>
+  Dice Sheet ne collecte aucune donnée personnelle. Tout ce que tu fais dans l'app reste sur ton appareil. Aucun compte, aucune statistique, aucune publicité, aucun tracking tiers.
+</div>
+
+<h2>1. Responsable du traitement</h2>
+<p>Cette app est publiée comme projet indépendant par :</p>
+<p><strong>Martin Lecué</strong><br>
+Développeur unique, agissant en qualité de responsable de traitement au sens de l'article 4(7) du Règlement général sur la protection des données (Règlement (UE) 2016/679, « RGPD »).<br>
+Pays d'établissement : France<br>
+Contact : <a href="mailto:martin.lecue@icloud.com">martin.lecue@icloud.com</a></p>
+
+<h2>2. Quelles données sont collectées</h2>
+<p><strong>Aucune.</strong> Dice Sheet ne collecte, ne transmet, ne stocke sur un serveur ni ne partage aucune donnée personnelle. Les joueurs, scores, historiques de parties et préférences sont stockés exclusivement sur ton appareil via les frameworks standards d'Apple (SwiftData et système de fichiers iOS). Ces données ne quittent jamais ton appareil sauf si tu les exportes ou les partages toi-même.</p>
+<p>Le développeur ne dispose d'aucun serveur, d'aucune base de données et n'a aucun moyen d'accéder à tes données.</p>
+
+<h2>3. Achats intégrés</h2>
+<p>Si tu choisis d'acheter le déblocage Premium optionnel, la transaction est entièrement traitée par <strong>Apple</strong> via l'App Store et le framework StoreKit. Dice Sheet reçoit uniquement une confirmation locale d'Apple que l'achat est valide, afin de débloquer les fonctionnalités Premium sur les appareils connectés au même identifiant Apple. Le développeur ne reçoit à aucun moment ton nom, ton adresse email, ton adresse de facturation ni tes informations de paiement.</p>
+<p>Le traitement de la transaction par Apple est régi par la <a href="https://www.apple.com/fr/legal/privacy/" target="_blank" rel="noopener">politique de confidentialité d'Apple</a>.</p>
+<p><strong>Base légale :</strong> exécution d'un contrat (article 6(1)(b) RGPD) — fournir les fonctionnalités Premium que tu as achetées.</p>
+
+<h2>4. Tiers</h2>
+<p>Dice Sheet n'intègre aucun SDK tiers collectant des données utilisateur. Pas de fournisseur d'analytics, pas de service de rapport de crash, pas de régie publicitaire, pas de tracker social ou marketing intégré dans l'app. Le seul tiers impliqué est Apple, exclusivement pour la distribution de l'app et le traitement des achats.</p>
+
+<h2>5. Transferts internationaux</h2>
+<p>Aucune donnée n'étant collectée ni transmise par le développeur, aucun transfert international de données n'a lieu. Le traitement par Apple des données d'achat peut impliquer des transferts internationaux, régis par le cadre de confidentialité propre à Apple.</p>
+
+<h2>6. Conservation</h2>
+<p>Les données de jeu restent sur ton appareil jusqu'à la suppression de l'app ou leur nettoyage manuel depuis les Réglages. Le développeur ne conserve aucune donnée utilisateur puisqu'il n'en collecte aucune.</p>
+
+<h2>7. Tes droits</h2>
+<p>En vertu du RGPD, tu disposes des droits d'accès, de rectification, d'effacement, de limitation, de portabilité, d'opposition, et du droit de retirer ton consentement à tout moment. Comme le développeur ne collecte ni ne traite de données personnelles, ces droits sont satisfaits de fait par l'absence de toute collecte. Si la politique évoluait pour introduire une collecte, tu serais informé dans l'app et ces droits seraient exerçables en écrivant à <a href="mailto:martin.lecue@icloud.com">martin.lecue@icloud.com</a>.</p>
+<p>Pour les données détenues par Apple en lien avec tes achats App Store, contacte directement Apple via ton compte Apple ID.</p>
+
+<h2>8. Droit d'introduire une réclamation</h2>
+<p>Si tu estimes que tes droits sont violés, tu peux introduire une réclamation auprès de l'autorité de contrôle de ton pays de résidence. En France, il s'agit de la <strong>Commission Nationale de l'Informatique et des Libertés (CNIL)</strong> — <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener">www.cnil.fr/fr/plaintes</a>.</p>
+
+<h2>9. Confidentialité des enfants</h2>
+<p>Dice Sheet est classée 4+ et convient aux enfants. L'app ne collecte aucune donnée personnelle, quel que soit l'âge de l'utilisateur. En France, l'âge du consentement numérique au sens de l'article 8 RGPD est fixé à 15 ans ; cette disposition n'est pas applicable ici puisqu'aucun traitement fondé sur le consentement n'a lieu.</p>
+
+<h2>10. Décisions automatisées</h2>
+<p>Dice Sheet ne procède à aucune décision automatisée ni profilage au sens de l'article 22 RGPD.</p>
+
+<h2>11. Résidents de Californie (CCPA / CPRA)</h2>
+<p>Si tu résides en Californie, tu bénéficies de droits au titre du California Consumer Privacy Act, tel que modifié par le California Privacy Rights Act, notamment le droit de savoir, de supprimer, de corriger, et de refuser la vente ou le partage de tes informations personnelles. Dice Sheet ne collecte aucune information personnelle et ne vend, partage ni traite donc aucune information personnelle de résidents californiens.</p>
+
+<h2>12. Sécurité</h2>
+<p>Le développeur s'appuie sur l'infrastructure sécurisée d'Apple pour la distribution de l'app et le traitement des achats, incluant le chiffrement en transit (HTTPS/TLS) pour toutes les communications avec les services d'Apple.</p>
+
+<h2>13. Modifications</h2>
+<p>Cette politique peut être mise à jour occasionnellement pour refléter des évolutions de l'app ou du droit applicable. La date « Dernière mise à jour » en haut reflète la dernière révision. Les changements significatifs — en particulier toute introduction d'une collecte de données — seront communiqués dans l'app avant leur entrée en vigueur.</p>
+
+<h2>14. Contact</h2>
+<p>Pour toute question relative à la confidentialité, écris à <a href="mailto:martin.lecue@icloud.com">martin.lecue@icloud.com</a>.</p>
+
+</body>
+</html>
