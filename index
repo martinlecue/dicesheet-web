@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dice Sheet — Yams Scorecard for iPhone</title>
+<meta name="description" content="The minimal scorecard for Yams, Yatzy and dice games. Native iOS. Ad-free. Designed for real dice on real tables.">
+<meta name="theme-color" content="#0a1230">
+<link rel="icon" type="image/png" sizes="180x180" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+
+<style>
+  :root {
+    --bg: #0a1230;
+    --bg-2: #131c4a;
+    --bg-3: #0a1230;
+    --gold: #d4af5f;
+    --gold-bright: #ebc364;
+    --text: #f5f1e3;
+    --text-dim: rgba(245, 241, 227, 0.62);
+    --text-dimmer: rgba(245, 241, 227, 0.4);
+    --border: rgba(212, 175, 95, 0.18);
+    --card: rgba(255, 255, 255, 0.04);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", system-ui, sans-serif;
+    background: var(--bg);
+    background-image:
+      radial-gradient(ellipse at top, var(--bg-2) 0%, var(--bg) 50%, var(--bg-3) 100%);
+    background-attachment: fixed;
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 17px;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+  .container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+  /* --------- Nav --------- */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    background: rgba(10, 18, 48, 0.7);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 28px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+  }
+  .nav-brand img {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+  }
+  .nav-links { display: flex; gap: 28px; font-size: 14.5px; }
+  .nav-links a { color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--text); }
+  @media (max-width: 600px) { .nav-links { display: none; } }
+
+  /* --------- Hero --------- */
+  .hero {
+    padding: 96px 0 80px;
+    text-align: center;
+  }
+  .hero img.icon {
+    width: 168px;
+    height: 168px;
+    border-radius: 38px;
+    box-shadow:
+      0 30px 80px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+    margin-bottom: 36px;
+  }
+  h1.hero-title {
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    margin-bottom: 18px;
+    background: linear-gradient(135deg, #ffffff 0%, #d4af5f 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero-subtitle {
+    font-size: 22px;
+    color: var(--text-dim);
+    max-width: 580px;
+    margin: 0 auto 40px;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+  }
+  @media (max-width: 600px) {
+    .hero { padding: 64px 0 56px; }
+    .hero img.icon { width: 128px; height: 128px; border-radius: 28px; margin-bottom: 28px; }
+    h1.hero-title { font-size: 44px; }
+    .hero-subtitle { font-size: 18px; }
+  }
+
+  /* --------- App Store badge --------- */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 28px;
+    background: var(--gold);
+    color: #1a1a1a;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    letter-spacing: -0.01em;
+    transition: transform 0.2s, background 0.2s;
+  }
+  .badge:hover { transform: translateY(-2px); background: var(--gold-bright); }
+  .badge-note {
+    display: block;
+    margin-top: 16px;
+    font-size: 14px;
+    color: var(--text-dimmer);
+  }
+
+  /* --------- Sections --------- */
+  section.pitch {
+    padding: 80px 0 40px;
+    text-align: center;
+  }
+  .pitch p {
+    font-size: 28px;
+    line-height: 1.4;
+    max-width: 720px;
+    margin: 0 auto;
+    letter-spacing: -0.015em;
+    color: var(--text);
+  }
+  .pitch .accent { color: var(--gold-bright); }
+  @media (max-width: 600px) { .pitch p { font-size: 22px; } }
+
+  /* --------- Features grid --------- */
+  section.features {
+    padding: 80px 0;
+  }
+  h2 {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--gold);
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    text-align: center;
+    margin-bottom: 56px;
+    line-height: 1.15;
+  }
+  @media (max-width: 600px) { .section-title { font-size: 30px; margin-bottom: 40px; } }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 860px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 540px) { .grid { grid-template-columns: 1fr; } }
+
+  .feature {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 28px;
+    transition: transform 0.25s, border-color 0.25s;
+  }
+  .feature:hover { transform: translateY(-3px); border-color: rgba(212, 175, 95, 0.5); }
+  .feature-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 11px;
+    background: rgba(212, 175, 95, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    font-size: 22px;
+    color: var(--gold-bright);
+    font-weight: 600;
+  }
+  .feature h3 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+  }
+  .feature p {
+    font-size: 15px;
+    color: var(--text-dim);
+    line-height: 1.55;
+  }
+
+  /* --------- Variants --------- */
+  section.variants {
+    padding: 80px 0;
+    text-align: center;
+  }
+  .variant-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .variant-pill {
+    padding: 12px 22px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 15px;
+    color: var(--text);
+    font-weight: 500;
+    letter-spacing: -0.005em;
+  }
+
+  /* --------- Premium --------- */
+  section.premium {
+    padding: 80px 0;
+  }
+  .premium-card {
+    background: linear-gradient(135deg, rgba(212, 175, 95, 0.1) 0%, rgba(212, 175, 95, 0.02) 100%);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 48px;
+    text-align: center;
+  }
+  @media (max-width: 600px) { .premium-card { padding: 32px 24px; } }
+  .premium-card h3 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+  .premium-card p {
+    color: var(--text-dim);
+    max-width: 540px;
+    margin: 0 auto 24px;
+    font-size: 16px;
+  }
+  .premium-features {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    justify-content: center;
+    font-size: 14px;
+    color: var(--gold-bright);
+    margin-top: 8px;
+  }
+  .premium-features span::before { content: "—"; margin-right: 8px; opacity: 0.5; }
+
+  /* --------- Privacy --------- */
+  section.privacy {
+    padding: 80px 0;
+    text-align: center;
+  }
+  .privacy p {
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+
+  /* --------- Footer --------- */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 48px 0 56px;
+    margin-top: 40px;
+  }
+  .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: var(--text-dimmer);
+  }
+  .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+  .footer-links a { color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--text); }
+
+  /* --------- Reveal animations --------- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <img src="icon.png" alt="Dice Sheet icon">
+      Dice Sheet
+    </div>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#variants">Variants</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero container">
+  <img class="icon" src="icon.png" alt="Dice Sheet app icon">
+  <h1 class="hero-title">Dice Sheet</h1>
+  <p class="hero-subtitle">The minimal scorecard for Yams, Yatzy and dice games. Designed for real dice on real tables.</p>
+  <a href="#" class="badge" id="appstore-link">Download on the App Store</a>
+  <span class="badge-note">Coming soon to iPhone</span>
+</header>
+
+<section class="pitch container">
+  <p class="reveal">A beautifully simple way to keep score. <span class="accent">No ads. No accounts. No clutter.</span> Just the most elegant scorecard ever made for dice games.</p>
+</section>
+
+<section class="features container" id="features">
+  <h2>Features</h2>
+  <p class="section-title">Everything you need.<br>Nothing you don't.</p>
+  <div class="grid">
+    <div class="feature reveal">
+      <div class="feature-icon">+</div>
+      <h3>One-tap games</h3>
+      <p>Add your players, pick a variant, and you're playing. No menus to navigate, no friction.</p>
+    </div>
+    <div class="feature reveal">
+      <div class="feature-icon">⚇</div>
+      <h3>Auto calculation</h3>
+      <p>Totals, bonuses, and combinations are computed instantly as you score. Never count by hand again.</p>
+    </div>
+    <div class="feature reveal">
+      <div class="feature-icon">⟳</div>
+      <h3>Auto-save</h3>
+      <p>Every game is saved as you play. Close the app mid-round, come back hours later, pick up exactly where you stopped.</p>
+    </div>
+    <div class="feature reveal">
+      <div class="feature-icon">◐</div>
+      <h3>Native Dark Mode</h3>
+      <p>A typography-first design with carefully tuned light and dark themes for any lighting.</p>
+    </div>
+    <div class="feature reveal">
+      <div class="feature-icon">⊞</div>
+      <h3>Multi-player, one device</h3>
+      <p>Up to ten players on a single iPhone. Perfect for the table, no signup required, no second device needed.</p>
+    </div>
+    <div class="feature reveal">
+      <div class="feature-icon">◊</div>
+      <h3>Optional dice helper</h3>
+      <p>Track your rolls with the in-app helper, or ignore it entirely and use your own dice. You choose.</p>
+    </div>
+  </div>
+</section>
+
+<section class="variants container" id="variants">
+  <h2>Variants</h2>
+  <p class="section-title">Play it your way.</p>
+  <div class="variant-list">
+    <span class="variant-pill">French Yams</span>
+    <span class="variant-pill">Yatzy</span>
+    <span class="variant-pill">Classic dice</span>
+    <span class="variant-pill">Custom rules — soon</span>
+  </div>
+</section>
+
+<section class="premium container">
+  <div class="premium-card reveal">
+    <h3>Dice Sheet Premium</h3>
+    <p>A one-time unlock. No subscription, no recurring charges. Pay once if you want more, never pay if you don't.</p>
+    <div class="premium-features">
+      <span>Advanced variants</span>
+      <span>Extended history</span>
+      <span>Detailed stats</span>
+      <span>Additional themes</span>
+      <span>Deep customization</span>
+    </div>
+  </div>
+</section>
+
+<section class="privacy container">
+  <h2>Privacy</h2>
+  <p class="section-title">Your games are yours.</p>
+  <p class="reveal">No accounts. No analytics. No advertising. No tracking. Your scorecards never leave your device — by design, not by promise. <a href="privacy.html" style="color: var(--gold-bright); text-decoration: none;">Read the full privacy policy →</a></p>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>© 2026 Martin Lecué</div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
+        <a href="mailto:martin.lecue@icloud.com">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
