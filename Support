@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dice Sheet — Support</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+    line-height: 1.65;
+    color: #1c1c1e;
+    background: #ffffff;
+    font-size: 16px;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #f2f2f7; background: #0a0a0c; }
+    a { color: #0a84ff; }
+    .contact-box { background: #1c1c1e; border-color: rgba(255,255,255,0.1); }
+  }
+  h1 { font-size: 32px; margin: 0 0 8px; letter-spacing: -0.02em; font-weight: 700; }
+  h2 { font-size: 20px; margin-top: 44px; letter-spacing: -0.01em; font-weight: 600; }
+  h3 { font-size: 16px; margin-top: 28px; margin-bottom: 4px; font-weight: 600; }
+  p { margin: 12px 0; }
+  .lang-switch { font-size: 14px; opacity: 0.7; margin-bottom: 28px; }
+  hr { border: none; border-top: 1px solid rgba(127,127,127,0.2); margin: 64px 0; }
+  a { color: #0066cc; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .contact-box {
+    background: #f5f5f7;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin: 28px 0;
+  }
+  .contact-box strong { display: block; margin-bottom: 8px; font-size: 15px; }
+</style>
+</head>
+<body>
+
+<h1>Dice Sheet — Support</h1>
+<p class="lang-switch"><a href="#fr">Version française ci-dessous</a></p>
+
+<p>Welcome. This page covers the most common questions about Dice Sheet. If you don't find your answer here, reach out and you'll get a real reply from the developer.</p>
+
+<div class="contact-box">
+  <strong>Contact</strong>
+  Email: <a href="mailto:martin.lecue@icloud.com">martin.lecue@icloud.com</a><br>
+  Response time: usually within 48 hours.
+</div>
+
+<h2>Frequently asked questions</h2>
+
+<h3>How do I start a new game?</h3>
+<p>Tap the plus button on the home screen, add your players, and start scoring. Players are saved for next time so you don't have to type them again.</p>
+
+<h3>How do I change game variant?</h3>
+<p>When creating a game, tap the variant selector at the top. The chosen variant determines the categories on the scorecard and the bonus rules. Currently supported: French Yams, Yatzy, and a Classic dice scoring variant.</p>
+
+<h3>Can I undo a score entry?</h3>
+<p>Yes. Tap any filled cell to edit or clear it. Long-press a cell for more options.</p>
+
+<h3>What is included in Premium?</h3>
+<p>Premium unlocks advanced variants, detailed statistics, extended game history, additional themes, and deeper customization. The standard Yams experience is fully free.</p>
+
+<h3>I purchased Premium but I don't see it</h3>
+<p>Open Settings inside Dice Sheet and tap "Restore Purchases". This asks Apple to re-deliver your entitlement. If the issue persists, write to <a href="mailto:martin.lecue@icloud.com">martin.lecue@icloud.com</a> with your Apple transaction ID (visible in your App Store account purchase history) and you'll be helped manually.</p>
+
+<h3>Does Dice Sheet sync between my devices?</h3>
+<p>Premium entitlements are restored on every device signed into the same Apple ID. Game history sync via iCloud is on the roadmap.</p>
+
+<h3>How do I delete my data?</h3>
+<p>All your data is stored on your device. Deleting the app removes everything. Dice Sheet does not collect any data on the developer's side.</p>
+
+<h3>Is Dice Sheet free of ads?</h3>
+<p>Yes. There are no ads, no analytics, no tracking pixels, and no third-party promotional content. Ever.</p>
+
+<h2>Privacy and data rights</h2>
+<p>Dice Sheet collects no personal data. You can read the full <a href="privacy.html">Privacy Policy</a> for the legal details.</p>
+<p>To exercise your GDPR rights (access, rectification, erasure, restriction, portability, objection, withdrawal of consent), or your CCPA rights if you are a California resident, write to <a href="mailto:martin.lecue@icloud.com">martin.lecue@icloud.com</a> with the words "Privacy request" in the subject line. You will get a reply within one month under Article 12(3) GDPR.</p>
+<p>If you wish to lodge a complaint, the competent French supervisory authority is the CNIL: <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener">www.cnil.fr/fr/plaintes</a>.</p>
+
+<h2>Report a bug or request a feature</h2>
+<p>Email <a href="mailto:martin.lecue@icloud.com">martin.lecue@icloud.com</a> with a short description, your iOS version, and ideally a screenshot. Every message is read.</p>
+
+<hr id="fr">
+
+<h1>Dice Sheet — Support</h1>
+
+<p>Bienvenue. Cette page couvre les questions les plus fréquentes sur Dice Sheet. Si tu ne trouves pas ta réponse ici, écris directement, tu auras une vraie réponse du développeur.</p>
+
+<div class="contact-box">
+  <strong>Contact</strong>
+  Email : <a href="mailto:martin.lecue@icloud.com">martin.lecue@icloud.com</a><br>
+  Délai de réponse : généralement sous 48 heures.
+</div>
+
+<h2>Questions fréquentes</h2>
+
+<h3>Comment démarrer une nouvelle partie ?</h3>
+<p>Tape le bouton plus sur l'écran d'accueil, ajoute les joueurs, et commence à marquer. Les joueurs sont sauvegardés pour la prochaine fois.</p>
+
+<h3>Comment changer de variante ?</h3>
+<p>Lors de la création d'une partie, tape sur le sélecteur de variante en haut. La variante choisie détermine les catégories de la feuille et les règles de bonus. Variantes actuellement supportées : Yams français, Yatzy, et une variante Classique de score aux dés.</p>
+
+<h3>Puis-je annuler une saisie ?</h3>
+<p>Oui. Tape sur n'importe quelle case remplie pour la modifier ou la vider. Un appui long ouvre plus d'options.</p>
+
+<h3>Qu'est-ce qui est inclus dans Premium ?</h3>
+<p>Premium débloque les variantes avancées, les statistiques détaillées, l'historique étendu, des thèmes supplémentaires et plus de personnalisation. L'expérience Yams standard reste entièrement gratuite.</p>
+
+<h3>J'ai acheté Premium mais je ne le vois pas</h3>
+<p>Ouvre les Réglages dans Dice Sheet et tape « Restaurer les achats ». Cela demande à Apple de redélivrer ton accès. Si le problème persiste, écris à <a href="mailto:martin.lecue@icloud.com">martin.lecue@icloud.com</a> avec ton identifiant de transaction Apple (visible dans l'historique d'achats de ton compte App Store) et tu seras aidé manuellement.</p>
+
+<h3>Dice Sheet se synchronise-t-elle entre mes appareils ?</h3>
+<p>Les achats Premium sont restaurés sur tous les appareils connectés au même identifiant Apple. La synchronisation de l'historique via iCloud est prévue dans une mise à jour future.</p>
+
+<h3>Comment supprimer mes données ?</h3>
+<p>Toutes tes données sont sur ton appareil. Supprimer l'app supprime tout. Dice Sheet ne collecte aucune donnée côté développeur.</p>
+
+<h3>Dice Sheet contient-elle des publicités ?</h3>
+<p>Non. Aucune publicité, aucune statistique, aucun pixel de tracking, aucun contenu promotionnel tiers. Jamais.</p>
+
+<h2>Confidentialité et droits</h2>
+<p>Dice Sheet ne collecte aucune donnée personnelle. La <a href="privacy.html">politique de confidentialité complète</a> détaille le cadre juridique.</p>
+<p>Pour exercer tes droits RGPD (accès, rectification, effacement, limitation, portabilité, opposition, retrait du consentement), ou tes droits CCPA si tu résides en Californie, écris à <a href="mailto:martin.lecue@icloud.com">martin.lecue@icloud.com</a> avec « Demande RGPD » en objet. Réponse sous un mois conformément à l'article 12(3) RGPD.</p>
+<p>Pour introduire une réclamation, l'autorité française compétente est la CNIL : <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener">www.cnil.fr/fr/plaintes</a>.</p>
+
+<h2>Signaler un bug ou suggérer une fonctionnalité</h2>
+<p>Écris à <a href="mailto:martin.lecue@icloud.com">martin.lecue@icloud.com</a> avec une courte description, ta version d'iOS, et idéalement une capture d'écran. Chaque message est lu.</p>
+
+</body>
+</html>
